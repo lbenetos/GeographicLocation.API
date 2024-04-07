@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "1c9223da-23b9-4bcd-8ce9-3c3f903ed147",
+		"name": "Natech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GeoLocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/geolocation/62.74.203.33",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"geolocation",
+						"62.74.203.33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBatchJob",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"ip\":\"185.44.146.190\"\r\n    },\r\n    {\r\n        \"ip\":\"62.74.203.33\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/geolocation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"geolocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBatchJobStatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"ip\":\"185.44.146.190\"\r\n    },\r\n    {\r\n        \"ip\":\"62.74.203.33\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/geolocation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"geolocation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
