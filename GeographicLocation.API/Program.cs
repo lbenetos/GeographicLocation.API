@@ -55,13 +55,11 @@ namespace GeographicLocation.API
 
             app.Run();
 
-<<<<<<< HEAD
+            //Comment on main!
             //comment on master!!
             //Comment on main!
             //Comment on main2!!
-=======
             //Comment on main!
->>>>>>> comment on main!
         }
     }
 }
