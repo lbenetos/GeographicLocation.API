@@ -55,9 +55,13 @@ namespace GeographicLocation.API
 
             app.Run();
 
+<<<<<<< HEAD
             //comment on master!!
             //Comment on main!
             //Comment on main2!!
+=======
+            //Comment on main!
+>>>>>>> comment on main!
         }
     }
 }
