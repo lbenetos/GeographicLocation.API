@@ -55,11 +55,7 @@ namespace GeographicLocation.API
 
             app.Run();
 
-            //Comment on main!
-            //comment on master!!
-            //Comment on main!
-            //Comment on main2!!
-            //Comment on main!
+            //I'm on main -- adding features, master will evolve so I need to attach in the head...
         }
     }
 }
