@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace GeographicLocation.Core
 {
+    /// <summary>
+    /// Location Repository
+    /// </summary>
     public class LocationRepository : ILocationRepository
     {
         private readonly LocationContext _context;
