@@ -1,6 +1,51 @@
-@GeographicLocation.API_HostAddress = http://localhost:5046
+﻿@GeographicLocation.API_HostAddress = http://localhost:5000
 
-GET {{GeographicLocation.API_HostAddress}}/weatherforecast/
-Accept: application/json
+@IP=62.74.203.33
+GET {{GeographicLocation.API_HostAddress}}/api/geolocation/{{IP}}
+
+###
+
+POST {{GeographicLocation.API_HostAddress}}/api/geolocation
+Content-Type: application/json
+
+[
+  { "ip":"185.44.146.190" },
+  { "ip":"62.74.203.33" },
+  { "ip":"192.168.1.1" },
+  { "ip":"203.0.113.5" },
+  { "ip":"198.51.100.7" },
+  { "ip":"172.16.0.2" },
+  { "ip":"10.0.0.3" },
+  { "ip":"8.8.8.8" },
+  { "ip":"208.67.222.222" },
+  { "ip":"1.1.1.1" },
+  { "ip":"45.79.75.133" },
+  { "ip":"23.239.16.110" },
+  { "ip":"172.217.3.110" },
+  { "ip":"64.233.177.139" },
+  { "ip":"216.58.192.142" },
+  { "ip":"74.125.24.102" },
+  { "ip":"98.137.11.164" },
+  { "ip":"35.186.238.101" },
+  { "ip":"157.240.195.35" },
+  { "ip":"31.13.77.36" },
+  { "ip":"195.15.218.172" },
+  { "ip":"220.244.148.84" },
+  { "ip":"176.34.132.101" },
+  { "ip":"54.201.123.210" },
+  { "ip":"52.88.0.2" },
+  { "ip":"18.208.67.35" },
+  { "ip":"34.192.190.2" },
+  { "ip":"44.224.79.10" },
+  { "ip":"69.89.31.226" },
+  { "ip":"74.125.195.147" },
+  { "ip":"72.21.92.90" }
+]
+
+
+###
+
+@BatchJobId=52a09d93-1f9f-4f11-8b99-65ffc10c682d
+GET {{GeographicLocation.API_HostAddress}}/api/geolocation/BatchJobId/{{BatchJobId}}
 
 ###

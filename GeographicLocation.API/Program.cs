@@ -1,3 +1,4 @@
+using System.Reflection;
 using AutoMapper;
 using GeographicLocation.Core;
 using GeographicLocation.Core.Service;
@@ -17,7 +18,13 @@ namespace GeographicLocation.API
             
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(i =>
+            {
+                var xmlComment = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlCommentPath = Path.Combine(AppContext.BaseDirectory, xmlComment);
+
+                i.IncludeXmlComments(xmlCommentPath);
+            });
 
             builder.Services.AddDbContext<LocationContext>(opt =>
             {
@@ -28,7 +35,6 @@ namespace GeographicLocation.API
             builder.Services.AddScoped<ILocationRepository, LocationRepository>();
 
             builder.Services.AddMemoryCachingServices(builder.Configuration);
-
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
             var app = builder.Build();

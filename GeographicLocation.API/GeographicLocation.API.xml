@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GeographicLocation.API</name>
+    </assembly>
+    <members>
+        <member name="M:GeographicLocation.API.Controllers.GeoLocationController.GetGeoLocation(System.String)">
+            <summary>
+            Returns the IP's location
+            </summary>
+            <param name="IP"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

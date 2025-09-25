@@ -27,7 +27,7 @@ namespace GeographicLocation.Core.Service
 
         #endregion
 
-        Task ProcessJob(BatchJob batchJob);
+        void ProcessJob(BatchJob batchJob);
 
         bool IsValidIpAddress(string IP);
 

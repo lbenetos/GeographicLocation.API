@@ -97,9 +97,9 @@ namespace GeographicLocation.Core.Service
 
         #endregion
 
-        public async Task ProcessJob(BatchJob batchJob)
+        public void ProcessJob(BatchJob batchJob)
         {
-            await Task.Run(async () =>
+            Task.Run(async () =>
             {
                 var IPs = await _locationRepository.GetIPsForBatchJobAsync(batchJob.Id);
 

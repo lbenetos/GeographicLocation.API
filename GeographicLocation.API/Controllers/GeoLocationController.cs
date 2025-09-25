@@ -24,6 +24,11 @@ namespace GeographicLocation.API.Controllers
             _locationService = locationService;
         }
 
+        /// <summary>
+        /// Returns the IP's location
+        /// </summary>
+        /// <param name="IP"></param>
+        /// <returns></returns>
         [HttpGet("{IP}")]
         public async Task<IActionResult> GetGeoLocation(string IP)
         {
@@ -76,10 +81,11 @@ namespace GeographicLocation.API.Controllers
                     return NotFound("Batch job could not be created");
                 }
 
-                await _locationService.ProcessJob(response);
+                _locationService.ProcessJob(response);
 
                 _logger.LogInformation("Successfully created a batch job");
 
+                //return CreateAtRoute
                 var url = ($"{this.HttpContext.Request.Scheme}://{this.HttpContext.Request.Host}{this.HttpContext.Request.Path}/BatchJobId/{response.Id}");
                 return Ok(url);
             }
